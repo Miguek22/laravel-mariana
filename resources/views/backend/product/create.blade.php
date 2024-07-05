@@ -31,33 +31,6 @@
           @enderror
         </div>
 
-
-        <div class="form-group">
-          <label for="is_featured">Está Destacado</label><br>
-          <input type="checkbox" name='is_featured' id='is_featured' value='1' checked> Yes                        
-        </div>
-              {{-- {{$categories}} --}}
-
-        <div class="form-group">
-          <label for="cat_id">Categoría <span class="text-danger">*</span></label>
-          <select name="cat_id" id="cat_id" class="form-control">
-              <option value="">--Seleccione cualquier categoría--</option>
-              @foreach($categories as $key=>$cat_data)
-                  <option value='{{$cat_data->id}}'>{{$cat_data->title}}</option>
-              @endforeach
-          </select>
-        </div>
-
-        <div class="form-group d-none" id="child_cat_div">
-          <label for="child_cat_id">Sub Categoría</label>
-          <select name="child_cat_id" id="child_cat_id" class="form-control">
-              <option value="">--Seleccione cualquier categoría--</option>
-              {{-- @foreach($parent_cats as $key=>$parent_cat)
-                  <option value='{{$parent_cat->id}}'>{{$parent_cat->title}}</option>
-              @endforeach --}}
-          </select>
-        </div>
-
         <div class="form-group">
           <label for="price" class="col-form-label">Precio(NRS) <span class="text-danger">*</span></label>
           <input id="price" type="number" name="price" placeholder="Enter price"  value="{{old('price')}}" class="form-control">
@@ -100,9 +73,9 @@
           <label for="condition">Condición</label>
           <select name="condition" class="form-control">
               <option value="">--Seleccionar condición--</option>
-              <option value="default">Default</option>
-              <option value="new">New</option>
-              <option value="hot">Hot</option>
+              <option value="default">Por defecto</option>
+              <option value="new">Nuevo</option>
+              <option value="hot">Usado</option>
           </select>
         </div>
 
@@ -110,21 +83,6 @@
           <label for="stock">Cantidad <span class="text-danger">*</span></label>
           <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"  value="{{old('stock')}}" class="form-control">
           @error('stock')
-          <span class="text-danger">{{$message}}</span>
-          @enderror
-        </div>
-        <div class="form-group">
-          <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
-          <div class="input-group">
-              <span class="input-group-btn">
-                  <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                  <i class="fa fa-picture-o"></i> Choose
-                  </a>
-              </span>
-          <input id="thumbnail" class="form-control" type="text" name="photo" value="{{old('photo')}}">
-        </div>
-        <div id="holder" style="margin-top:15px;max-height:100px;"></div>
-          @error('photo')
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
@@ -140,8 +98,8 @@
           @enderror
         </div>
         <div class="form-group mb-3">
-          <button type="reset" class="btn btn-warning">Reset</button>
-           <button class="btn btn-success" type="submit">Submit</button>
+
+           <button class="btn btn-success" type="submit">Enviar</button>
         </div>
       </form>
     </div>

@@ -60,8 +60,8 @@ use App\Http\Controllers\TipografiaController;
     Route::get('login/{provider}/', [LoginController::class, 'redirect'])->name('login.redirect');
     Route::get('login/{provider}/callback/', [LoginController::class, 'Callback'])->name('login.callback');
 
-    Route::get('/', [FrontendController::class, 'home'])->name('home');
-    Route::get('/', [ProductController::class, 'index']);
+    Route::get('/', [FrontendController::class, 'home']);
+    Route::get('/', [ProductController::class, 'index'])->name('home');
 
 // Frontend Routes
     Route::get('/home', [FrontendController::class, 'index']);
@@ -144,6 +144,8 @@ Route::get('/disenio', [DisenioController::class, 'index'])->name('disenio');
         Route::resource('banner', 'BannerController');
         // Brand
         Route::resource('brand', 'BrandController');
+        
+        Route::resource('customer', 'CustomerController');
         // Profile
         Route::get('/profile', [AdminController::class, 'profile'])->name('admin-profile');
         Route::post('/profile/{id}', [AdminController::class, 'profileUpdate'])->name('profile-update');

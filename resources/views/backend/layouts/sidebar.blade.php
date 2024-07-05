@@ -44,6 +44,20 @@
         </div>
     </li>
 
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#customerCollapse" aria-expanded="true" aria-controls="customerCollapse">
+        <i class="fas fa-user-circle"></i>
+        <span>Clientes</span>
+      </a>
+      <div id="customerCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Opciones de Clientes :</h6>
+          <a class="collapse-item" href="{{route('customer.index')}}">Clientes</a>
+          <a class="collapse-item" href="{{route('customer.create')}}">Agregar Cliente</a>
+        </div>
+      </div>
+  </li>
+
   
 
     {{-- <!-- Divider -->
