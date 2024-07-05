@@ -18,7 +18,7 @@
 
         <div class="form-group">
           <label for="summary" class="col-form-label">Resumen <span class="text-danger">*</span></label>
-          <textarea class="form-control" id="summary" name="summary">{{$product->summary}}</textarea>
+          <textarea class="form-control" name="summary">{{$product->summary}}</textarea>
           @error('summary')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -26,7 +26,7 @@
 
         <div class="form-group">
           <label for="description" class="col-form-label">Descripción</label>
-          <textarea class="form-control" id="description" name="description">{{$product->description}}</textarea>
+          <textarea class="form-control" name="description">{{$product->description}}</textarea>
           @error('description')
           <span class="text-danger">{{$message}}</span>
           @enderror

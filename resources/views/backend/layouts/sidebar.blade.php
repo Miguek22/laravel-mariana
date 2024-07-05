@@ -1,15 +1,9 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('admin')}}">
-      
-      {{-- <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
-      </div>
-      <div class="sidebar-brand-text mx-3">EcoIngenio</div> --}}
-
-      <img src="{{asset('backend/img/LogoEco.png')}}" style="max-width:75%" alt="LogoEco.png">
-    </a>
+    <div class="sidebar-brand d-flex align-items-center justify-content-center">
+      <h3>Dashboard</h3>
+    </div>
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
@@ -22,7 +16,7 @@
         </a>
         <div id="productCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Opciones de Productos:</h6>
+            <h6 class="collapse-header">Opciones de Producto:</h6>
             <a class="collapse-item" href="{{route('product.index')}}">Productos</a>
             <a class="collapse-item" href="{{route('product.create')}}">Agregar Productos</a>
           </div>
@@ -37,7 +31,7 @@
         </a>
         <div id="brandCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Opciones de Marcas :</h6>
+            <h6 class="collapse-header">Opciones de Marca:</h6>
             <a class="collapse-item" href="{{route('brand.index')}}">Marcas</a>
             <a class="collapse-item" href="{{route('brand.create')}}">Agregar Marcas</a>
           </div>
@@ -51,12 +45,26 @@
       </a>
       <div id="customerCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Opciones de Clientes :</h6>
+          <h6 class="collapse-header">Opciones de Cliente:</h6>
           <a class="collapse-item" href="{{route('customer.index')}}">Clientes</a>
           <a class="collapse-item" href="{{route('customer.create')}}">Agregar Cliente</a>
         </div>
       </div>
-  </li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#providerCollapse" aria-expanded="true" aria-controls="providerCollapse">
+        <i class="fas fa-truck"></i>
+        <span>Proveedores</span>
+      </a>
+      <div id="providerCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Opciones de Proveedor:</h6>
+          <a class="collapse-item" href="{{route('providers.index')}}">Proveedores</a>
+          <a class="collapse-item" href="{{route('providers.create')}}">Agregar Proveedor</a>
+        </div>
+      </div>
+    </li>
+
 
   
 
